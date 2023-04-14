@@ -1,0 +1,31 @@
+<main id="edit">
+    <section id="edit-container">
+        <div class="edit-container-info">
+            <h1>Edit Game Code Offer</h1>
+           {{#with game}}
+               <form action="/game/{{_id}}/edit" method="post">
+                   <label>Platform:</label>
+                   <select id="platform" name="platform">
+                       <option value="">-------</option>
+                       <option value="PC">PC</option>
+                       <option value="Nintendo">Nintendo</option>
+                       <option value="PS4">PS4</option>
+                       <option value="PS5">PS5</option>
+                       <option value="XBOX">XBOX</option>
+                   </select>
+                   <label for="name">Name:</label>
+                   <input type="text" id="name" name="name" value="{{name}}">
+                   <label for="image">Image:</label>
+                   <input type="text" id="image" name="image" placeholder="https://image.api.playstation.com/vulcan/ap/rnd/202208/0921/dR9KJAKDW2izPbptHQbh3rnj.png" value="{{image}}">
+                   <label for="price">Price:</label>
+                   <input type="number" id="price" name="price" value="{{price}}">
+                   <label for="genre">Genre:</label>
+                   <input type="text" id="genre" name="genre" value="{{genre}}">
+                   <label for="description">Description:</label>
+                   <textarea id="description" name="description">{{description}}</textarea>
+                   <input type="submit" id="btn" value="EDIT">
+               </form>
+           {{/with}}
+        </div>
+    </section>
+</main>

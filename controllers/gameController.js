@@ -23,7 +23,7 @@ router.post('/create', hasUser(), async (req, res) => {
     const formData = req.body;
     formData.price = Number(formData.price);
     formData.owner = req.user._id;
-    console.log('formData (create) >>> ', formData)
+    // console.log('formData (create) >>> ', formData)
     
     try {
         await create(formData)
@@ -95,7 +95,7 @@ router.post('/:id/edit', hasUser(), async (req, res) => {
     const formData = req.body;
     formData.price = Number(formData.price);
     
-    console.log('formData (edit) >>> ', formData)
+    // console.log('formData (edit) >>> ', formData)
 
     try {
         const game = await getById(req.params.id);

@@ -3,7 +3,8 @@ const parseError = require('../util/errorParser');
 const { getAll, getByCriteria } = require("../services/gameService");
 
 router.get('/', async (req,res) => {
-    console.log('req.query >>>', req.query)
+    // console.log('req.query >>>', req.query)
+    
     try {
         let games = [];
         

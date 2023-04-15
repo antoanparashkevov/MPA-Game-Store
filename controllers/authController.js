@@ -29,7 +29,7 @@ router.post('/register',
     async (req,res) => {
     
     const formData = req.body;
-    console.log('formData (register) >>>', formData);
+    // console.log('formData (register) >>>', formData);
     
     try {
         
@@ -70,7 +70,8 @@ router.get('/login', isGuest(), (req, res) => {
 
 router.post('/login', isGuest(), async (req, res) => {
     const formData = req.body;
-    console.log('formData (login) >>> ', formData)
+    // console.log('formData (login) >>> ', formData)
+    
     try {
         const token = await login(formData.email, formData.password);
         res.cookie('token', token);
